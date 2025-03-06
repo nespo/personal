@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Md Jashim Uddin - Professional Web Developer Portfolio" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md Jashim Uddin | Portfolio</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate On Scroll (AOS) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    (function(){
+      // Initialize EmailJS with your public key
+      emailjs.init("BUbaCn9HWFUxbiYMZ");
+    })();
+  </script>
+
+  <!-- Custom Tailwind Config (optional) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          // You can add custom colors, fonts, etc. here if needed
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-xl font-bold">Md Jashim Uddin</div>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#about" class="hover:text-blue-600 transition-colors">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a></li>
+        <li><a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a></li>
+        <li><a href="#education" class="hover:text-blue-600 transition-colors">Education</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-600 transition-colors">Portfolio</a></li>
+        <li><a href="#reviews" class="hover:text-blue-600 transition-colors">Reviews</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
+      </ul>
+      <!-- Mobile Menu (hamburger) -->
+      <button
+        id="menuBtn"
+        class="md:hidden focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Toggle Menu"
+      >
+        <svg class="w-6 h-6 fill-current text-gray-700" viewBox="0 0 24 24">
+          <path
+            d="M4 5h16M4 12h16M4 19h16"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <ul class="flex flex-col p-4 space-y-2">
+        <li><a href="#about" class="block hover:text-blue-600">About</a></li>
+        <li><a href="#skills" class="block hover:text-blue-600">Skills</a></li>
+        <li><a href="#experience" class="block hover:text-blue-600">Experience</a></li>
+        <li><a href="#education" class="block hover:text-blue-600">Education</a></li>
+        <li><a href="#portfolio" class="block hover:text-blue-600">Portfolio</a></li>
+        <li><a href="#reviews" class="block hover:text-blue-600">Reviews</a></li>
+        <li><a href="#contact" class="block hover:text-blue-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <header class="relative overflow-hidden" id="home">
+    <!-- Gradient Background -->
+    <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 pt-16 pb-32 text-white text-center">
+      <div class="max-w-7xl mx-auto px-4">
+        <img
+          src="https://i.ibb.co/8n6HrrxK/profile.jpg"
+          alt="Profile"
+          class="mx-auto rounded-full mb-4 w-32 h-32 object-cover shadow-lg"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        />
+        <h1
+          class="text-3xl md:text-5xl font-extrabold mb-2"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          Md Jashim Uddin
+        </h1>
+        <p
+          class="text-lg md:text-xl font-light"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Web Developer | 12+ Years of Experience
+        </p>
+        <p class="mt-3">
+          <a
+            href="https://www.linkedin.com/in/md-jashim-uddin09"
+            target="_blank"
+            class="underline hover:text-gray-200"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            LinkedIn Profile
+          </a>
+        </p>
+      </div>
+    </div>
+    <!-- SVG Wave Divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg
+        class="w-full h-24 md:h-32 lg:h-40 text-white"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="currentColor"
+          fill-opacity="1"
+          d="M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,112C672,107,768,117,864,138.7C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="bg-white pt-12 pb-16" id="about" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">About Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="leading-relaxed mb-4">
+            As a seasoned web developer with over 12 years of experience, I specialize in creating
+            dynamic and beautiful web pages for a wide range of clients. My work is centered on
+            understanding each client's unique needs and translating those into functional websites
+            and applications.
+          </p>
+          <p class="leading-relaxed mb-4">
+            I have a strong background in front-end and back-end development using HTML, CSS, JavaScript,
+            Python, and PHP. Beyond those, I also have experience with frameworks such as Django,
+            Laravel, and more.
+          </p>
+          <p class="leading-relaxed">
+            I am well-versed in setting up servers, databases, and crafting efficient code that drives
+            websites for optimal performance. I enjoy working with content management systems like
+            WordPress, as well as Django for complex web applications.
+          </p>
+        </div>
+        <!-- Optional about image or illustration -->
+        <div class="flex justify-center">
+          <img
+            src="https://i.ibb.co/35PB9Qsp/2148586494.jpg"
+            alt="About Illustration"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="bg-gray-50 py-12" id="skills" data-aos="fade-right">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <ul class="space-y-2 list-disc list-inside">
+          <li>Web Development</li>
+          <li>Python (Django, Flask)</li>
+          <li>JavaScript (React, Node.js)</li>
+          <li>PHP (Laravel)</li>
+          <li>SQL & Database Management</li>
+        </ul>
+        <ul class="space-y-2 list-disc list-inside">
+          <li>Artificial Intelligence (AI)</li>
+          <li>Deep Learning, NumPy, Pandas</li>
+          <li>Responsive Web Design</li>
+          <li>WordPress & CMS Development</li>
+          <li>RESTful APIs & Microservices</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="bg-white py-12" id="experience" data-aos="fade-left">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Experience</h2>
+      <div class="space-y-8">
+        <div class="p-6 border-l-4 border-blue-600 bg-gray-50 rounded">
+          <h3 class="text-xl font-semibold">
+            Employee, Creative IT Institute 
+            <span class="text-sm font-normal text-gray-500">(Jan 2012 - Present)</span>
+          </h3>
+          <p class="text-gray-600 mt-1">Dhaka, Bangladesh</p>
+          <p class="mt-2 leading-relaxed">
+            Working on a variety of projects, from small business websites to large-scale eCommerce
+            platforms. Responsible for end-to-end development, problem-solving, and delivering
+            high-quality work that exceeds client expectations.
+          </p>
+        </div>
+        <!-- Add more experience blocks if needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="bg-gray-50 py-12" id="education" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Education</h2>
+      <div class="p-6 border-l-4 border-indigo-600 bg-white rounded">
+        <h3 class="text-xl font-semibold">Institute of Business Administration, University of Dhaka</h3>
+        <p class="text-gray-600 mt-1"><strong>2011 - 2017</strong></p>
+        <p class="mt-2 leading-relaxed">
+          Attended the Institute of Business Administration, focusing on business and IT integration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO SECTION ========== -->
+  <section class="bg-white py-12" id="portfolio" data-aos="zoom-in">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Portfolio & Embedded Websites</h2>
+      <p class="mb-6">
+        Below are examples of sites embedded for demonstration. Feel free to explore.
+      </p>
+      <!-- Embedded Site 1 -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold mb-2">1. Pukimuki.com</h3>
+        <iframe
+          src="https://pukimuki.com/"
+          class="w-full h-96 border border-gray-300 rounded"
+        ></iframe>
+      </div>
+      <!-- Embedded Site 2 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2">2. Shirleyandstone.com</h3>
+        <iframe
+          src="https://www.shirleyandstone.com/"
+          class="w-full h-96 border border-gray-300 rounded"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REVIEWS SECTION ========== -->
+<section class="bg-gray-50 py-12" id="reviews" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">Client Reviews</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded shadow hover:shadow-lg transition-shadow">
+                <p class="mb-2">
+                    “Working with Jashim was a fantastic experience. He delivered on time and went above and
+                    beyond to ensure our site was perfect.”
+                </p>
+                <h5 class="text-right font-semibold">- Shirley Hong, Shirley&Stone WHOLESALE CO.</h5>
+            </div>
+            <div class="bg-white p-6 rounded shadow hover:shadow-lg transition-shadow">
+                <p class="mb-2">
+                    “Superb communication and attention to detail. We will definitely hire him again for our
+                    next project!”
+                </p>
+                <h5 class="text-right font-semibold">- Al-Naim, Project Manager at DoubtMind Ltd.</h5>
+            </div>
+            <div class="bg-white p-6 rounded shadow hover:shadow-lg transition-shadow">
+                <p class="mb-2">
+                    “One of the best developers I've worked with. He understood our requirements perfectly
+                    and delivered an excellent product.”
+                </p>
+                <h5 class="text-right font-semibold">- Ariel Michael, PukiMuki</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="bg-white py-12" id="contact" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Contact</h2>
+      
+      <!-- Basic Info -->
+      <div class="mb-6">
+        <p><strong>Phone:</strong> <a href="tel:+8801759230928" class="text-blue-600 hover:underline">+8801759230928</a></p>
+        <p><strong>Email:</strong> <a href="mailto:bainchoid@gmail.com" class="text-blue-600 hover:underline">bainchoid@gmail.com</a></p>
+        <p><strong>Address:</strong> 41 22 A Afsar Uddin Road Zigatola Dhaka 1209 Bangladesh</p>
+      </div>
+
+      <!-- Contact Form (EmailJS Example) -->
+      <form id="contact-form" class="space-y-4 max-w-xl" autocomplete="off">
+        <div>
+          <label for="from_name" class="block font-medium mb-1">Your Name</label>
+          <input
+            type="text"
+            id="from_name"
+            name="from_name"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+        <div>
+          <label for="reply_to" class="block font-medium mb-1">Your Email</label>
+          <input
+            type="email"
+            id="reply_to"
+            name="reply_to"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="john@example.com"
+            required
+          />
+        </div>
+        <div>
+          <label for="message" class="block font-medium mb-1">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Your message here..."
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+        >
+          Send Message
+        </button>
+      </form>
+      
+      <!-- Status messages -->
+      <div id="status-message" class="mt-4 text-green-600 font-semibold hidden">
+        Your message has been sent successfully!
+      </div>
+      <div id="error-message" class="mt-4 text-red-600 font-semibold hidden">
+        Oops! Something went wrong. Please try again.
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-gray-800 text-gray-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p>
+        &copy; <span id="year"></span> Md Jashim Uddin. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: false, // whether animation should happen only once - while scrolling down
+      offset: 80,  // offset (in px) from the original trigger point
+      duration: 800 // values from 0 to 3000, with step 50ms
+    });
+
+    // Update Footer Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Contact Form Submission using EmailJS
+    const contactForm = document.getElementById("contact-form");
+    const statusMessage = document.getElementById("status-message");
+    const errorMessage = document.getElementById("error-message");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        emailjs
+          .sendForm("service_jm9i4je", "template_l8u5ybj", this)
+          .then(() => {
+            // Show success message
+            statusMessage.classList.remove("hidden");
+            errorMessage.classList.add("hidden");
+            contactForm.reset();
+          })
+          .catch((error) => {
+            // Show error message
+            console.error(error);
+            errorMessage.classList.remove("hidden");
+            statusMessage.classList.add("hidden");
+          });
+      });
+    }
+  </script>
+</body>
+</html>
